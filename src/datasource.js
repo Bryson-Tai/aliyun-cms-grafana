@@ -473,7 +473,7 @@ export class GenericDatasource {
   getMetrics(project) {
     var param = {
       path:
-        "?Action=QueryMetricMeta&PageNumber=1&PageSize=1000&Project=" +
+        "?Action=QueryMetricMeta&PageNumber=1&PageSize=2000&Project=" +
         project,
       method: "GET",
     };

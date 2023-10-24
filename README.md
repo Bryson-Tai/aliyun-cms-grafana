@@ -14,11 +14,21 @@
     a. 前端编译
         进入aliyun-cms-grafana目录下,执行grunt命令(需要安装nodejs和npm),则会按照Gruntfile.js里面的配置将项目里面的文件打包到指定的目录,
         当前配置是将项目文件打包到dist目录下,发布的时候打包发布整个插件目录下的文件,dist目录下一定是经源文件编译后的。
+        
+        <!-- Extra Note -->
+        - Install grunt-CLI through `sudo npm install -g grunt-cli`
+        - Install dependencies through `sudo npm install`, it will look for package.json and install the dependencies defined in it.
+
     b. 服务端编译
     需要安装   
         go 1.14   
         mage
         之后在目录中运行 mage -v， 会自动在 dist目录下生成 相应的二进制包。之后跟随前端代码统一发布
+        
+        <!-- Extra Note -->
+        - Use `asdf` to install mage
+        - Run `mage -v` to get which dependencies should be install and follow the instruction
+        - Run `mage -v` until it could build binary successfully.
 
     c. 部署
         1）按照上面顺序编译完成后，代码都会到dist下面。包括前端文件和二进制可执行文件 cms-datasource*。
